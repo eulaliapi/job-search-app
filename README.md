@@ -1,27 +1,30 @@
-# JobSearchApp
+# Job Search App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.6.
 
-## Development server
+## Description
+The app is built using [Angular Material Components](https://material.angular.io/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The app displays the job offers and their additional information provided by [themuse](https://www.themuse.com/) website in their [api](https://www.themuse.com/developers/api/v2) section.
 
-## Code scaffolding
+## How it works
+At startup the application displays a search bar and underneath it 20 job offers. Using the paginator the user can see the folowing 20 job offers and so on until the last page is hit.
+</br>
+<img src="https://user-images.githubusercontent.com/98905459/205061815-524948c6-f19f-4472-8ae1-2c8fbd200da4.png" alt="app preview" width="70%">
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The search bar above the list of job offers can be used to filter the job offers that match the user's input.
+</br>
+<img src="https://user-images.githubusercontent.com/98905459/205061832-b2215baf-c47d-4f54-ae62-473585e5df28.png" alt="app search bar" width="70%">
 
-## Build
+When clicking on a job offer title, the user navigates to the details page of that offer: there a card displays title, level, location and description of the job offer.
+</br>
+<img src="https://user-images.githubusercontent.com/98905459/205061854-515e3153-8fe7-43aa-8a9e-3833e0840b25.png" alt="job offer details" width="70%">
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+An expansion panel positioned under the job description displays the name of the company offering the job: the user can interact with it to see more information about it.
+</br>
+<img src="https://user-images.githubusercontent.com/98905459/205063207-0eda025f-3029-4d13-8513-de0b5d83476a.png" alt="job offer company details" width="70%">
 
-## Running unit tests
+The user can navigate back to the list of job offers clicking the "Go Back" button positioned above the card.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Links
+Try the app [here](https://angular-job-search-app.web.app/jobs).
