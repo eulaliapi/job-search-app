@@ -1,0 +1,21 @@
+<div class="search-bar_container">
+<app-search-bar (newRequest)="newFormRequest($event)"></app-search-bar>
+</div>
+
+<main>
+<section class="jobs-page_section">
+  <ng-template *ngIf="results; then list else spinner"></ng-template>
+</section>
+
+<ng-template #spinner>
+  <app-spinner></app-spinner>
+</ng-template>
+
+<ng-template #list>
+  <app-jobs-list [results]="results" ></app-jobs-list>
+</ng-template>
+
+<div>
+<app-paginator (newPageIndex)="newPage($event)" [length]="totalItems"></app-paginator>
+</div>
+</main>

@@ -1,0 +1,103 @@
+.jobs-list_item {
+    display:grid;
+    grid-template-areas: 
+        'icon chip location location location location'
+        'job job job job job job'
+        'date date date date date date';
+    gap: 10px;
+    border: 1px solid var(--clr-primary-400);
+    border-radius: 15px;
+    margin: 20px 10px;
+    padding: 5px;
+    background-color: var(--clr-secondary-400);
+    box-shadow: 0px 0px 10px var(--clr-secondary-600);
+}
+
+.jobs-list_item_icon {
+    grid-area: icon;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.jobs-list_item_chip {
+    grid-area: chip;
+    background-color: var(--clr-secondary-600);
+    border-radius: 15px;
+}
+
+.jobs-list_item_chip_text{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    font-weight: bold;
+    color: var(--clr-secondary-400);
+}
+
+.jobs-list_item_location {
+    grid-area: location;
+    text-align: center;
+}
+
+.jobs-list_item_location_text {
+    color: var(--clr-primary-400);
+    font-weight: bold;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.jobs-list_item_job {
+    grid-area: job;
+}
+
+.jobs-list_item_job_text {
+   font-weight: bold;
+   text-decoration: underline;
+   color: var(--clr-primary-400);
+   position: relative;
+   top: 50%;
+   transform: translateY(-50%);
+   margin: 0 5px;
+}
+
+.jobs-list_item_date {
+    grid-area: date;
+    text-align: right;
+}
+
+.jobs-list_item_date_text {
+    font-weight: light;
+    font-size: small;
+    font-style: italic;
+    color: var(--clr-primary-400);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+    margin: 0 5px; 
+}
+
+@media screen and (min-width: 576px) {
+    .jobs-list_container {
+        margin: 0 40px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .jobs-list_container {
+        margin: 0 100px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .jobs-list_container {
+        margin: 0 250px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .jobs-list_container {
+        margin: 0 350px;
+    }
+}

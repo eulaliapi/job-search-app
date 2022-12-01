@@ -1,0 +1,25 @@
+<form [formGroup]="jobSearchForm" (ngSubmit)="onSubmit(jobSearchForm)">
+  <mat-form-field appearance="outline">
+    <mat-label for="category">Category</mat-label>
+    <input matInput #input id="category" name="category" placeholder="Ex. Software Engineering"
+    formControlName="category">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label for="location">Location</mat-label>
+    <input matInput #input id="location" name="location" placeholder="Ex. Lisbon, Portugal"
+    formControlName="location">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label for="level">Level</mat-label>
+    <mat-select id="level" name="level"
+    formControlName="level">
+      <mat-option *ngFor="let level of level_options" [value]="level">{{level}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div class="btn_container">
+  <button mat-raised-button color="primary">Search</button>
+  </div>
+</form>

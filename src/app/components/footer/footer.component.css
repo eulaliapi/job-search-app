@@ -1,0 +1,29 @@
+.footer {
+    border-radius: 0%;
+    background-color: var(--clr-primary-200);
+    color: var(--clr-secondary-400);
+    padding: 30px;
+}
+
+.card_footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-link {
+    margin: 0 1px;
+    color: var(--clr-secondary-400);
+}
+
+.footer-link:hover{
+    color: var(--clr-secondary-200);
+}
+
+ 
+@media screen and (max-width: 768px) {
+
+    .card_footer {
+        display:block;
+        text-align: center;
+    }
+}

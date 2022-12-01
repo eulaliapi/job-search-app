@@ -1,0 +1,57 @@
+<main>
+
+  <div class="btn_container">
+    <button mat-raised-button color="primary" (click)="goBack()">Go Back</button>
+  </div>
+
+  <section class="jobs-page_section">
+    <ng-template *ngIf="jobDetails; then showJobDetails else spinner"></ng-template>
+  </section>
+
+  <ng-template #spinner>
+    <app-spinner></app-spinner>
+  </ng-template>
+
+  <ng-template #showJobDetails>
+
+    <div class="job-details-page_container">
+
+    <div class="job-details-page_header">
+      <div class="job-details-page_name">
+        <p class="job-details-page_name_text">{{jobDetails?.name}}</p>
+      </div>
+
+        <div class="job-details-page_chip">
+          <p class="job-details-page_chip_text">{{jobDetails?.levels?.[0]?.name}}</p>
+        </div>
+
+        <div class="job-details-page_location">
+          <p class="job-details-page_location_text">{{jobDetails?.locations?.[0]?.name}}</p>
+        </div>
+      </div>
+
+      <p [innerHTML]="jobDetails?.contents" class="job-details-page_text">
+        {{jobDetails?.contents}}
+      </p>
+
+      <mat-accordion>
+        <mat-expansion-panel hideToggle class="job-details-page_expansion-panel">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{jobDetails?.company?.name}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <p>{{companyDetails?.description}}</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+
+      <div class="job-details-page_date">
+        <p class="job-details-page_date_text">
+          Published: {{jobDetails?.publication_date | date}}
+        </p>
+      </div>
+
+    </div>
+
+  </ng-template>
+</main>

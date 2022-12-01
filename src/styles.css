@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --clr-primary-200: rgb(71, 120, 255);
+    --clr-primary-400: rgb(42, 44, 165);
+    --clr-secondary-200: rgba(255, 255, 255, 0.884);
+    --clr-secondary-300: rgb(241, 240, 240);
+    --clr-secondary-400: rgb(255, 255, 255);
+    --clr-secondary-600: rgb(199, 199, 199);
+    --clr-secondary-800: rgb(131, 131, 131);
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-color: var(--clr-secondary-300);}

@@ -1,0 +1,7 @@
+<mat-paginator #paginator [length]="length"
+              [pageSize]="20"
+              [pageIndex]="pageIndex"
+              (page)="getPage(paginator.pageIndex)"
+              aria-label="Select page">
+</mat-paginator>
+

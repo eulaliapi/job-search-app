@@ -1,0 +1,25 @@
+form {
+    display:grid;
+    margin: 15px 0;
+}
+
+.btn_container{
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    color: var(--clr-primary-400);
+}
+
+@media screen and (min-width: 768px) {
+    form {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
+    .btn_container{
+        grid-column: span 3;
+    }
+
+}

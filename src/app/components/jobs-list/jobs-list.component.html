@@ -1,0 +1,22 @@
+<div class="jobs-list_container">
+
+    <div *ngFor="let result of results" class="jobs-list_item">
+
+        <div class="jobs-list_item_icon">
+            <mat-icon>person</mat-icon>
+        </div>
+        <div class="jobs-list_item_chip">
+            <div class="jobs-list_item_chip_text">{{result.levels[0].name}}</div>
+        </div>
+        <div class="jobs-list_item_location">
+            <p class="jobs-list_item_location_text">{{result.locations[0].name}}</p>
+        </div>
+        <div class="jobs-list_item_job">
+            <a class="jobs-list_item_job_text" routerLink="/jobs/{{result.id}}">{{result.name}}</a>
+        </div>
+        <div class="jobs-list_item_date">
+            <p class="jobs-list_item_date_text">Published: {{result.publication_date | date}}</p>
+        </div>
+    </div>
+
+</div>
