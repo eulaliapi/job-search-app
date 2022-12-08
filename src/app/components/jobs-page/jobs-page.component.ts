@@ -32,8 +32,8 @@ export class JobsPageComponent implements OnInit {
       this.results = res.results;
     });
   }
-  
-  newFormRequest(e: FormGroup){
+
+  newFormRequest(e: FormGroup) {
     this.requestForm.patchValue({ category: e.value.category, location: e.value.location, level: e.value.level });
     this.jobService.raiseDataEmitterEvent();
     this.jobService.getParams(this.requestForm).subscribe(res => {
@@ -42,14 +42,14 @@ export class JobsPageComponent implements OnInit {
     });
   }
 
-  newPage(e: number){
-    if (e != 0) {
-      this.requestForm.patchValue({ page: e });
-      this.jobService.getParams(this.requestForm).subscribe(res => {
-        this.results = res.results;
-        this.totalItems = res.total;
-      });
-    }
+  newPage(e: number) {
+
+    this.requestForm.patchValue({ page: e });
+    this.jobService.getParams(this.requestForm).subscribe(res => {
+      this.results = res.results;
+      this.totalItems = res.total;
+    });
+
   }
 
 }

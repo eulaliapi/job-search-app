@@ -25,9 +25,19 @@ export class JobService {
     });
 
     for(let key in formValue){
+      
       if(formValue[key] != '' && key != 'page'){
+
+        if(key == 'category'){
+          formValue[key] = this.formatCategory(formValue[key])
+        }
+        if(key == 'location'){
+          formValue[key] = this.formatLocation(formValue[key]);
+        }
+        
         httpParams = httpParams.append(key, formValue[key]);
-      } 
+      }
+
     }
 
     let request = this.getJobsList(httpParams);
@@ -55,6 +65,22 @@ export class JobService {
     )
 
     return companyDetsCall;
+  }
+
+  formatCategory(str: string): string{
+    let arr = str.split(" ");
+    for(let i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toUpperCase().concat(arr[i].substring(1).toLowerCase());
+    }
+    return arr.join(" ");
+  }
+
+  formatLocation(str: string) {
+    let arr = str.replace(",", "").split(" ");
+    for(let i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].charAt(0).toUpperCase().concat(arr[i].substring(1).toLowerCase());
+    }
+    return arr.join(", ");
   }
 
   raiseDataEmitterEvent(){

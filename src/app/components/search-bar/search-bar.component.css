@@ -3,6 +3,10 @@ form {
     margin: 15px 0;
 }
 
+mat-form-field{
+    margin: 10px 0;
+}
+
 .btn_container{
     display: flex;
     justify-content: center;
